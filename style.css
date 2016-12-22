@@ -1,0 +1,67 @@
+:root {
+    --pad_size: 10vw;
+}
+
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    font-family: monospace;
+    background: url('https://images.alphacoders.com/106/106181.jpg');
+}
+
+h1 {
+    position: fixed;
+    width: 100%;
+    font-size: 4rem;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .5);
+    padding: .5em;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;   
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 4rem);
+}
+
+.pad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: var(--pad_size);
+    height: var(--pad_size);
+    background-color: #11b8ff;
+    color: #fff;    
+    border: 1px solid #c8c8c8;
+    border-radius: 10px;
+    margin: 1em;
+    box-shadow: 0px 0px 10px 0px #bbb;
+    transition: all .1s ease-in-out;
+}
+
+.pad div:first-child {
+    font-size: calc(var(--pad_size)/2); 
+}
+
+.pad div:nth-child(2) {
+    font-size: calc(var(--pad_size)/8); 
+}
+
+.pad--click {
+    transform: scale(.9 );
+    border: calc(var(--pad_size)/10) solid #ff0080;
+    background-color: #f7d2ff;
+}
